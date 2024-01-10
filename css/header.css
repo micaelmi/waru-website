@@ -49,10 +49,20 @@ img {
 .hamburger::after {
   content: "";
   position: absolute;
-  top: 30%;
+  top: 35%;
   left: 15%;
   width: 70%;
-  height: 10%;
+  height: 8%;
+  border-radius: 20px;
+  background-color: #fff;
+  transition: 1s ease;
+}
+.hamburger .line {
+  position: absolute;
+  top: 55%;
+  left: 15%;
+  width: 70%;
+  height: 8%;
   border-radius: 20px;
   background-color: #fff;
   transition: 1s ease;
@@ -60,10 +70,10 @@ img {
 .hamburger::before {
   content: "";
   position: absolute;
-  top: 60%;
-  left: 35%;
-  width: 50%;
-  height: 10%;
+  top: 75%;
+  left: 15%;
+  width: 70%;
+  height: 8%;
   border-radius: 20px;
   background-color: #fff;
   transition: 1s ease;
@@ -74,6 +84,14 @@ img {
   width: 70%;
   top: 45%;
   left: 15%;
+}
+
+#hamburger:checked + label .hamburger .line {
+  transform: rotate(337deg);
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
 }
 
 #hamburger:checked ~ label .hamburger::before {
@@ -92,6 +110,30 @@ header {
   left: 0;
   align-items: center;
   z-index: 100;
+}
+header a {
+  color: #fff;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: lowercase;
+  transition: 0.5s ease;
+  position: relative;
+}
+header a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  border-radius: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+header a:hover::after {
+  width: 100%;
 }
 
 nav {
@@ -130,31 +172,6 @@ nav div {
   justify-content: center;
 }
 
-a {
-  color: #fff;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-transform: lowercase;
-  transition: 0.5s ease;
-  position: relative;
-}
-a::after {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 3px;
-  border-radius: 2px;
-  bottom: -2px;
-  left: 0;
-  background-color: #fff;
-  transition: all 0.3s ease;
-}
-a:hover::after {
-  width: 100%;
-}
-
 .logo {
   height: 40px;
 }
@@ -163,9 +180,6 @@ a:hover::after {
 }
 
 @media screen and (max-width: 980px) {
-  header {
-    height: 100px;
-  }
   .hamburger {
     display: block;
     z-index: 999;
@@ -179,7 +193,7 @@ a:hover::after {
     height: 100vh;
     width: 100%;
     max-width: 250px;
-    background-color: #413f39;
+    background: linear-gradient(to bottom, #413f39 20%, #242323);
     flex-direction: column;
     padding: 100px 20px;
     z-index: 998;

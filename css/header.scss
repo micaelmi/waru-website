@@ -12,6 +12,33 @@ header {
   left: 0;
   align-items: center;
   z-index: 100;
+
+  a {
+    color: $text-color;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: lowercase;
+    transition: 0.5s ease;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 3px;
+      border-radius: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: $text-color;
+      transition: all 0.3s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
 }
 
 nav {
@@ -44,33 +71,6 @@ nav {
   }
 }
 
-a {
-  color: $text-color;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  text-transform: lowercase;
-  transition: 0.5s ease;
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    border-radius: 2px;
-    bottom: -2px;
-    left: 0;
-    background-color: $text-color;
-    transition: all 0.3s ease;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
-}
-
 .logo {
   height: 40px;
 
@@ -80,10 +80,6 @@ a {
 }
 
 @media screen and (max-width: 980px) {
-  header {
-    height: 100px;
-  }
-
   .hamburger {
     display: block;
     z-index: 999;
@@ -98,7 +94,7 @@ a {
     height: 100vh;
     width: 100%;
     max-width: 250px;
-    background-color: $bg-color;
+    background: linear-gradient(to bottom, #413f39 20%, #242323);
     flex-direction: column;
     padding: 100px 20px;
     z-index: 998;

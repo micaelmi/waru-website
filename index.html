@@ -16,7 +16,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
+    <!-- <link rel="stylesheet" href="./css/footer.css" /> -->
     <!-- JS -->
     <script defer src="./js/menu.js"></script>
   </head>
@@ -24,27 +24,82 @@
     <header>
       <nav>
         <div class="logo">
-          <a href="/" class="hide-lg"
-            ><img src="img/icon.webp" alt="Icone"
-          /></a>
-          <a href="/">
-            <img src="img/logo.svg" alt="Logo Waru" class="hide-sm" />
-          </a>
+          <img src="img/logo.svg" alt="Logo Waru" />
         </div>
         <input id="hamburger" type="checkbox" unchecked style="display: none" />
         <label for="hamburger">
-          <div class="hamburger active"></div>
+          <div class="hamburger active"><div class="line"></div></div>
         </label>
         <div class="menu">
           <li><a href="/">Home</a></li>
-          <li><a href="produtos.html">Produtos</a></li>
-          <li><a href="sobre.html">Sobre nós</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="about.html">Sobre nós</a></li>
+          <li><a href="accommodations.html">Acomodações</a></li>
+          <li><a href="contact.html">Contato</a></li>
+          <li><a href="#">en</a></li>
         </div>
       </nav>
     </header>
-
-    <main></main>
-    <footer></footer>
+    <main>
+      <div class="hero">
+        <h1>Inspire-se</h1>
+        <h2>Em Uma Paisagem Criativa</h2>
+        <a href="https://airbnb.com/h/waru" target="_blank" class="book">
+          Faça sua reserva
+        </a>
+      </div>
+      <div class="container accommodations">
+        <div class="gallery">
+          <img src="img/dome1.webp" alt="Domo visto de fora" />
+          <img src="img/bathroom1.webp" alt="Banheiro visto de fora" />
+          <img src="img/bathroom2.webp" alt="Banheiro visto de dentro" />
+          <img src="img/dome2.webp" alt="Domo visto de dentro 1" />
+          <img src="img/dome3.webp" alt="Domo visto de dentro 2" />
+          <img src="img/dome4.webp" alt="Domo visto de dentro 3" />
+        </div>
+        <div class="description">
+          <h3>acomodações</h3>
+          <p>
+            Nossa principal acomodação é um singular quarto em uma cúpula
+            geodésica, com um acolhedor banheiro privativo, situado diante de um
+            belo lago com vistas deslumbrantes. Convenientemente localizado a
+            apenas 1h30 de São Paulo capital, tornando-se um destino fácil e
+            acessível para escapadas. Oferecemos uma variedade de experiências
+            encantadoras, como piqueniques, passeios de caiaque, fogueiras,
+            culinária local e passeios de bicicleta, para que você possa se
+            imergir totalmente na beleza natural e tranquilidade da região.
+          </p>
+        </div>
+        <img
+          class="landscape"
+          src="img/dome5.webp"
+          alt="Domos vistos de fora"
+        />
+      </div>
+      <div class="container activities">
+        <div class="photos">
+          <img src="img/activity1.webp" alt="Picnic" />
+          <img src="img/activity2.webp" alt="Caiaque" />
+        </div>
+        <div class="description">
+          <h3>atividades</h3>
+          <p>
+            Aproveite uma paisagem encantadora deste lugar romântico em meio à
+            natureza. Acreditamos que viagens e conexões humanas podem inspirar
+            mudanças positivas. Nossas suítes exclusivas em domos geodésicos com
+            vista para um lindo lago, oferecem um espaço tranquilo e inspirador
+            para que você hóspedes possa se conectar consigo mesmo, com os
+            outros e com o mundo ao seu redor.
+          </p>
+        </div>
+        <img
+          class="dam-photo"
+          src="img/dam.webp"
+          alt="Represa em frente ao local"
+        />
+      </div>
+    </main>
+    <footer>
+      <img src="img/logo.svg" alt="Logo Waru" />
+    </footer>
   </body>
 </html>
